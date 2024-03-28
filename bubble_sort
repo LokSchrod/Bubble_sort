@@ -1,0 +1,14 @@
+rednet.open("top") -- ajuste a direção conforme necessário
+
+function ativarBubbleShort()
+    redstone.setOutput("back", true)
+    sleep(1)
+    redstone.setOutput("back", false)
+end
+
+while true do
+    print("Pressione qualquer tecla para ativar o Bubble Short...")
+    os.pullEvent("key") -- aguarda o pressionamento de uma tecla
+    ativarBubbleShort() -- ativa o Bubble Short
+    print("Bubble Short ativado!")
+end
